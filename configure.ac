@@ -265,8 +265,8 @@ for i in DLLTOOL MAKE UNZIP TAR MKDIR CP RM STOW MAKENSIS ZCAT TEXI2DVI \
 done
 
 # Additional runtime libraries from mingw.
-GPG4WIN_RUNTIME_LIBRARY(libgcc_s_sjlj-1)
-GPG4WIN_RUNTIME_LIBRARY(libstdc++-6)
+#GPG4WIN_RUNTIME_LIBRARY(libgcc_s_sjlj-1)
+#GPG4WIN_RUNTIME_LIBRARY(libstdc++-6)
 GPG4WIN_RUNTIME_LIBRARY(libwinpthread-1)
 
 AC_CHECK_PROGS(GLIB_GENMARSHAL, glib-genmarshal)

@@ -106,15 +106,15 @@ if [ "$myhost" = "w32" ]; then
     case $myhostsub in
         w64)
           [ -z "$w32root" ] && w32root="$HOME/w32root"
-          toolprefixes="$w32_toolprefixes i686-w64-mingw32 i586-mingw32msvc"
-          toolprefixes="$toolprefixes i386-mingw32msvc mingw32"
+          toolprefixes="$w32_toolprefixes x86_64-w64-mingw32"
+          # toolprefixes="$toolprefixes i386-mingw32msvc mingw32"
           extraoptions="$w32_extraoptions"
           extratoolprefixes="$w64_toolprefixes x86_64-w64-mingw32"
           ;;
         *)
           [ -z "$w32root" ] && w32root="$HOME/w32root"
           toolprefixes="$w32_toolprefixes i686-w64-mingw32 i586-mingw32msvc"
-          toolprefixes="$toolprefixes i386-mingw32msvc mingw32"
+          # toolprefixes="$toolprefixes i386-mingw32msvc mingw32"
           extraoptions="$w32_extraoptions"
           ;;
     esac
