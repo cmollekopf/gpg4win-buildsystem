@@ -654,13 +654,13 @@ installers/gpg4win-src-$(VERSION).exe: gpg4win-src.nsi $(common_nsii) \
 license.blurb: $(top_srcdir)/doc/license-page $(top_srcdir)/doc/GPLv3
 	cat $(top_srcdir)/doc/license-page $(top_srcdir)/doc/GPLv3 >$@
 
-g4wihelp.dll: slideshow.cpp desktopshellrun.cpp g4wihelp.c exdll.h
-	$(CC) -static-libgcc -I. -O2 -c -o desktopshellrun.o $(srcdir)/desktopshellrun.cpp
-	$(CC) -static-libgcc -I. -O2 -c -o slideshow.o $(srcdir)/slideshow.cpp
-	$(CC) -static-libgcc -I. -shared -O2 -o g4wihelp.dll $(srcdir)/g4wihelp.c \
-	  desktopshellrun.o slideshow.o -lwinmm -lgdi32 -luserenv -lshell32 \
-	  -lole32 -loleaut32 -lshlwapi -lmsimg32
-	$(STRIP) g4wihelp.dll
+# g4wihelp.dll: slideshow.cpp desktopshellrun.cpp g4wihelp.c exdll.h
+# 	$(CC) -static-libgcc -I. -O2 -c -o desktopshellrun.o $(srcdir)/desktopshellrun.cpp
+# 	$(CC) -static-libgcc -I. -O2 -c -o slideshow.o $(srcdir)/slideshow.cpp
+# 	$(CC) -static-libgcc -I. -shared -O2 -o g4wihelp.dll $(srcdir)/g4wihelp.c \
+# 	  desktopshellrun.o slideshow.o -lwinmm -lgdi32 -luserenv -lshell32 \
+# 	  -lole32 -loleaut32 -lshlwapi -lmsimg32
+# 	$(STRIP) g4wihelp.dll
 
 sha1sum.exe: sha1sum.c
 	$(CC) -O2 -o $@ $^
@@ -680,25 +680,29 @@ mkportable.exe: mkportable.c \
 	$(STRIP) $@
 
 if BUILD_SOURCE_INSTALLER
-all_src = installers/gpg4win-src-$(VERSION).exe
+# all_src = installers/gpg4win-src-$(VERSION).exe
+all_src =
 else
 all_src =
 endif
 
 if BUILD_LIGHT_INSTALLER
-all_light = installers/gpg4win-light-$(VERSION).exe
+# all_light = installers/gpg4win-light-$(VERSION).exe
+all_light =
 else
 all_light =
 endif
 
 if BUILD_VANILLA_INSTALLER
-all_vanilla = installers/gpg4win-vanilla-$(VERSION).exe
+# all_vanilla = installers/gpg4win-vanilla-$(VERSION).exe
+all_vanilla =
 else
 all_vanilla =
 endif
 
 if BUILD_FULL_INSTALLER
-all_full = installers/gpg4win-$(VERSION).exe
+# all_full = installers/gpg4win-$(VERSION).exe
+all_full =
 else
 all_full =
 endif
