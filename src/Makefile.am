@@ -152,7 +152,7 @@ gpg4win_pkg_glib_configure = \
   --disable-modular-tests \
   --with-lib-prefix=$(idir) --with-libiconv-prefix=$(idir) \
   CPPFLAGS=-I$(idir)/include LDFLAGS=-L$(idir)/lib CCC=$(host)-g++
-gpg4win_pkg_glib_extracflags = -march=i486
+gpg4win_pkg_glib_extracflags = -march=x86-64
 
 gpg4win_pkg_gdk_pixbuf_configure = \
   --with-lib-prefix=$(idir) --with-libiconv-prefix=$(idir) \
