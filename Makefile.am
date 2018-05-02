@@ -29,6 +29,7 @@ EXTRA_DIST = autogen.sh README.GIT ONEWS \
         build-aux/git-log-footer build-aux/git-log-fix \
         patches/glib-2.41.5/01-socket.patch \
         patches/glib-2.41.5/02-formatsec.patch \
+        patches/glib-2.41.5/03-valgrind.patch \
         patches/qtbase/relative-paths.patch \
         patches/qtbase/qtbase-mingw-fixes.patch \
         patches/qtbase/config-standardpaths.patch \

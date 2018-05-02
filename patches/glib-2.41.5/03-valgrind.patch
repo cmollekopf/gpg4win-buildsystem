@@ -1,0 +1,18 @@
+#! /bin/sh
+patch -p1 -l -f $* < $0
+exit $?
+
+Added missing header.
+
+
+diff -Nrub glib-2.41.5.orig/glib/valgrind.h glib-2.41.5/glib/valgrind.h
+--- glib-2.41.5.orig/glib/valgrind.h    2018-05-02 09:05:24.482878225 +0200
++++ glib-2.41.5/glib/valgrind.h 2018-05-01 16:55:50.601905002 +0200
+@@ -93,6 +93,7 @@
+
+
+ #include <stdarg.h>
++#include <stddef.h>
+
+ /* Nb: this file might be included in a file compiled with -ansi.  So
+    we can't use C++ style "//" comments nor the "asm" keyword (instead
