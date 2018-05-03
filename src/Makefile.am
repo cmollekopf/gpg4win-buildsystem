@@ -679,33 +679,30 @@ mkportable.exe: mkportable.c \
 	$(CC) -O2 -o $@ $(srcdir)/mkportable.c
 	$(STRIP) $@
 
-if BUILD_SOURCE_INSTALLER
+all_src = installers/gpg4win-src-$(VERSION).exe
+# if BUILD_SOURCE_INSTALLER
 # all_src = installers/gpg4win-src-$(VERSION).exe
-all_src =
-else
-all_src =
-endif
+# else
+# all_src =
+# endif
 
-if BUILD_LIGHT_INSTALLER
+# if BUILD_LIGHT_INSTALLER
 # all_light = installers/gpg4win-light-$(VERSION).exe
-all_light =
-else
-all_light =
-endif
+# else
+# all_light =
+# endif
 
-if BUILD_VANILLA_INSTALLER
+# if BUILD_VANILLA_INSTALLER
 # all_vanilla = installers/gpg4win-vanilla-$(VERSION).exe
-all_vanilla =
-else
-all_vanilla =
-endif
+# else
+# all_vanilla =
+# endif
 
-if BUILD_FULL_INSTALLER
+# if BUILD_FULL_INSTALLER
 # all_full = installers/gpg4win-$(VERSION).exe
-all_full =
-else
-all_full =
-endif
+# else
+# all_full =
+# endif
 
 all-local: $(all_full) $(all_light) $(all_vanilla) $(all_src)
 	@echo "###################################################"
